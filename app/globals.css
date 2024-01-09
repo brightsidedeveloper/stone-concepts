@@ -76,7 +76,7 @@
   }
 }
 
-.dur-10 {
-  transition-duration: 10s;
-  animation-duration: 10s;
+.dur-20 {
+  transition-duration: 20s;
+  animation-duration: 20s;
 }

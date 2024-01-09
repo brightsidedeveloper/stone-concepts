@@ -60,11 +60,15 @@ export default function Home() {
 
   const [neverEnding, setNeverEnding] = useState(0)
   useEffect(() => {
+    setNeverEnding(1)
     const interval = setInterval(() => {
-      setNeverEnding(prev => (prev === 1 ? 0 : 1))
-    }, 10_000)
+      setNeverEnding(0)
+      setTimeout(() => {
+        setNeverEnding(1)
+      }, 1)
+    }, 20_000)
     return () => clearInterval(interval)
-  }, [neverEnding])
+  }, [])
 
   return (
     <div
@@ -235,20 +239,20 @@ export default function Home() {
         <div className='w-full relative h-[15rem]'>
           <div
             className={cn(
-              'absolute top-0 left-0 h-[15rem] w-full transition-all',
+              'absolute top-0 left-0 h-[15rem] w-full transition-all ease-linear',
               neverEnding === 0
                 ? 'translate-x-0 duration-0'
-                : '-translate-x-full dur-10'
+                : '-translate-x-full dur-20'
             )}
           >
             <Image src='/assets/pan.png' alt='hero' layout='fill' />
           </div>
           <div
             className={cn(
-              'absolute top-0 left-0 h-[15rem] w-full transition-all',
+              'absolute top-0 left-0 h-[15rem] w-full transition-all ease-linear',
               neverEnding === 0
                 ? 'translate-x-full duration-0'
-                : 'translate-x-0 dur-10'
+                : 'translate-x-0 dur-20'
             )}
           >
             <Image src='/assets/pan.png' alt='hero' layout='fill' />
