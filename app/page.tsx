@@ -74,7 +74,7 @@ export default function Home() {
             hasScrolled ? 'bg-stone-900/30' : 'bg-stone-900'
           )}
         >
-          <div className='px-4 md:px-20 py-3 flex items-center justify-between w-full max-w-[95rem]'>
+          <div className='px-4 lg:px-20 py-3 flex items-center justify-between w-full max-w-[95rem]'>
             <Image src='/assets/LOGO.png' alt='logo' width={150} height={100} />
             <a href='tel:9136363773'>
               <Button className='bg-red-500 hover:bg-red-600 hover:shadow-2xl transition-all'>
@@ -94,7 +94,7 @@ export default function Home() {
           className='absolute z-[-1]'
         />
         <div className='flex flex-col gap-10 p-10 bg-stone-900/40 w-full max-w-4xl items-center justify-center h-fit rounded-lg'>
-          <h1 className='text-4xl md:text-6xl font-bold text-white text-center'>
+          <h1 className='text-4xl lg:text-6xl font-bold text-white text-center'>
             Stone Veneer
           </h1>
           <p className='text-white text-center'>
@@ -121,32 +121,32 @@ export default function Home() {
       <section className='relative h-screen bg-stone-900/30'>
         <div
           className={cn(
-            'absolute py-4 md:py-32 z-[1] inset-0 w-full h-full flex flex-wrap items-start flex-col md:flex-row justify-center gap-8 md:gap-10 transition-all duration-700',
+            'absolute py-4 lg:py-32 z-[1] inset-0 w-full h-full flex flex-wrap items-start flex-col ml-2 lg:ml-0 lg:flex-row justify-center gap-8 lg:gap-10 transition-all duration-700',
             testies ? 'translate-x-0' : 'translate-x-full'
           )}
         >
           {TESTIES.map(({ name, message }) => (
             <div
               key={name}
-              className='flex p-4 bg-stone-300 rounded-lg shadow-xl flex-col items-center w-full h-full max-w-64 max-h-64 md:max-w-96 md:max-h-80'
+              className='flex p-4 bg-stone-300 rounded-lg shadow-xl flex-col items-center w-full h-full max-w-[15rem] max-h-[15rem] lg:max-w-96 lg:max-h-80'
             >
-              <h1 className='text-xl font-bold text-stone-900 -mt-3 md:mt-0 md:mb-4'>
+              <h1 className='text-lg font-bold text-stone-900 -mt-3 lg:mt-0 lg:mb-4'>
                 {name}
               </h1>
-              <p className='text-sm md:text-base'>{message}</p>
+              <p className='text-xs lg:text-base'>{message}</p>
             </div>
           ))}
         </div>
         <div
           className={cn(
-            'absolute inset-0 py-4 md:py-32 w-full h-full flex flex-wrap items-end flex-col md:flex-row justify-around md:justify-center gap-8 md:gap-10 transition-all duration-700',
+            'absolute inset-0 py-4 lg:py-32 w-full h-full flex flex-wrap items-end flex-col -ml-2 lg:ml-0 lg:flex-row justify-around lg:justify-center gap-8 lg:gap-10 transition-all duration-700',
             testies ? 'translate-x-0' : '-translate-x-full'
           )}
         >
           {LAYS.map(({ name, img }) => (
             <div
               key={name}
-              className='flex relative p-4 bg-white rounded-lg shadow-xl flex-col items-center w-full h-full max-w-[12rem] max-h-[11rem] md:max-w-96 md:max-h-80'
+              className='flex relative p-4 bg-white rounded-lg shadow-xl flex-col items-center w-full h-full max-w-[12rem] max-h-[12rem] lg:max-w-96 lg:max-h-80'
             >
               <Image
                 src={img}

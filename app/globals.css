@@ -68,7 +68,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border overflow-hidden;
   }
   body {
     background-image: url('/assets/bg.png');
