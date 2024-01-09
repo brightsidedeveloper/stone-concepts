@@ -44,12 +44,16 @@ const LAYS = [
 export default function Home() {
   const [hasScrolled, setHasScrolled] = useState(false)
   const [testies, setTesties] = useState(false)
+  const [showGallery, setShowGallery] = useState(false)
 
   const onScroll = useCallback((e: any) => {
     setHasScrolled(e.target.scrollTop > 0)
     if (e.target.scrollTop <= document.body.clientHeight - 300)
       return setTesties(false)
-    else setTesties(true)
+    setTesties(true)
+    if (e.target.scrollTop <= document.body.clientHeight * 3 - 50)
+      return setShowGallery(false)
+    setShowGallery(true)
   }, [])
 
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -68,8 +72,8 @@ export default function Home() {
       setNeverEnding(0)
       setTimeout(() => {
         setNeverEnding(1)
-      }, 10)
-    }, 20_000)
+      }, 5)
+    }, 20_010)
     return () => clearInterval(interval)
   }, [])
 
@@ -99,7 +103,7 @@ export default function Home() {
           </div>
         </header>
       </div>
-      <section className={'h-screen relative flex justify-center items-center'}>
+      <section className={'relative h-screen flex justify-center items-center'}>
         <Image
           src='/assets/hero.webp'
           alt='hero'
@@ -180,7 +184,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className='relative  h-screen '>
+      <section className='relative h-screen '>
         <div className='flex w-full h-full'>
           <div className='h-full w-full'>
             <div className='relative w-full h-1/2 border-stone-500 border-[3px] border-r-[1.5px] border-b-[1.5px]'>
@@ -268,12 +272,13 @@ export default function Home() {
             <Image src='/assets/pan.png' alt='hero' layout='fill' />
           </div>
         </div>
+        <div></div>
       </section>
       <section className='relative h-screen backdrop-blur-sm bg-stone-900/30'></section>
       {/* //TODO Gallery appears on scroll */}
       <section
         className={
-          'h-screen relative bg-stone-800/40 flex justify-center items-center'
+          'relative h-screen bg-stone-800/40 flex justify-center items-center'
         }
       >
         <Image

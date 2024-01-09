@@ -71,6 +71,7 @@
     @apply border-border overflow-hidden;
   }
   body {
+    @apply bg-cover bg-no-repeat bg-center;
     background-image: url('/assets/bg.png');
     background-repeat: repeat;
   }
