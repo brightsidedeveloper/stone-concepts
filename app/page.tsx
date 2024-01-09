@@ -121,7 +121,7 @@ export default function Home() {
       <section className='relative h-screen bg-stone-900/30'>
         <div
           className={cn(
-            'absolute py-4 md:py-32 z-[1] inset-0 w-full h-full flex flex-wrap items-start justify-end md:justify-center gap-8 md:gap-10 transition-all duration-700',
+            'absolute py-4 md:py-32 z-[1] inset-0 w-full h-full flex flex-wrap items-start flex-col md:flex-row justify-center gap-8 md:gap-10 transition-all duration-700',
             testies ? 'translate-x-0' : 'translate-x-full'
           )}
         >
@@ -139,7 +139,7 @@ export default function Home() {
         </div>
         <div
           className={cn(
-            'absolute inset-0 py-4 md:py-32 w-full h-full flex flex-wrap items-end justify-start md:justify-center gap-8 md:gap-10 transition-all duration-700',
+            'absolute inset-0 py-4 md:py-32 w-full h-full flex flex-wrap items-end flex-col md:flex-row justify-around md:justify-center gap-8 md:gap-10 transition-all duration-700',
             testies ? 'translate-x-0' : '-translate-x-full'
           )}
         >
