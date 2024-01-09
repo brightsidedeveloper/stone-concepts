@@ -80,3 +80,20 @@
   transition-duration: 20s;
   animation-duration: 20s;
 }
+
+.one {
+  background-image: url('/assets/one.png');
+  backgound-size: cover;
+  background-position: center;
+  background-opacity: 0.5;
+}
+
+.two {
+  background-image: url('/assets/two.png');
+  background-position: center;
+}
+
+.three {
+  background-image: url('/assets/three.png');
+  background-position: center;
+}

@@ -10,16 +10,19 @@ const TESTIES = [
     name: 'David',
     message:
       '"I was looking for a contractor to install stone around a fireplace and someone highly recommended Stone Concepts. I met with Frank to discuss and he was an expert and easy to work with. I love how the stonework looks, and everyone that has seen it has said how beautiful it is.  I highly recommend Stone Concepts!"',
+    className: 'one',
   },
   {
     name: 'Adam',
     message:
       '"I couldn’t recommend Stone Concepts any more highly!  Great communication, stellar work, and reasonable prices!  Work was done on time, and based around our busy family’s schedule.  Working with Frank and his team was a pleasure.  You won’t be disappointed!"',
+    className: 'two',
   },
   {
     name: 'Duane',
     message:
       '"Frank and crew are the best! Outstanding work and good prices, great people!"',
+    className: 'three',
   },
 ]
 
@@ -137,15 +140,20 @@ export default function Home() {
             testies ? 'translate-x-0' : 'translate-x-full'
           )}
         >
-          {TESTIES.map(({ name, message }) => (
+          {TESTIES.map(({ name, message, className }) => (
             <div
               key={name}
-              className='flex p-4 relative bg-stone-300 rounded-lg shadow-xl flex-col items-center w-full h-full max-w-[15rem] max-h-[15rem] lg:max-w-96 lg:max-h-80'
+              className={cn(
+                'flex border-stone-500 border-2 relative bg-[length:800px_800px] bg-center bg-stone-300 rounded-xl shadow-xl flex-col items-center w-full h-full max-w-[15rem] max-h-[15rem] lg:max-w-96 lg:max-h-80',
+                className
+              )}
             >
-              <h1 className='text-lg font-bold text-stone-900 -mt-3 lg:mt-0 lg:mb-4'>
-                {name}
-              </h1>
-              <p className='text-xs lg:text-base'>{message}</p>
+              <div className='w-full h-full p-4 text-center bg-stone-900/80'>
+                <h1 className='text-lg font-bold text-stone-50 -mt-3 lg:mt-0 lg:mb-4'>
+                  {name}
+                </h1>
+                <p className='text-stone-50 text-xs lg:text-base'>{message}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -172,7 +180,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className='relative  h-screen'>
+      <section className='relative  h-screen '>
         <div className='flex w-full h-full'>
           <div className='h-full w-full'>
             <div className='relative w-full h-1/2 border-white border-[3px]'>
@@ -237,7 +245,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className='relative h-screen backdrop-blur-sm bg-stone-900/30'>
+      <section className='relative h-screen backdrop-blur-sm bg-stone-900/30 border-b-2 border-stone-500'>
         <div className='w-full relative h-[15rem]'>
           <div
             className={cn(
@@ -261,6 +269,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className='relative h-screen backdrop-blur-sm bg-stone-900/30'></section>
       {/* //TODO Gallery appears on scroll */}
       <section
         className={
