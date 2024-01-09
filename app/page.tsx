@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 const TESTIES = [
   {
@@ -57,6 +57,14 @@ export default function Home() {
       behavior: 'smooth',
     })
   }, [])
+
+  const [neverEnding, setNeverEnding] = useState(0)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setNeverEnding(prev => (prev === 1 ? 0 : 1))
+    }, 10_000)
+    return () => clearInterval(interval)
+  }, [neverEnding])
 
   return (
     <div
@@ -128,7 +136,7 @@ export default function Home() {
           {TESTIES.map(({ name, message }) => (
             <div
               key={name}
-              className='flex p-4 bg-stone-300 rounded-lg shadow-xl flex-col items-center w-full h-full max-w-[15rem] max-h-[15rem] lg:max-w-96 lg:max-h-80'
+              className='flex p-4 relative bg-stone-300 rounded-lg shadow-xl flex-col items-center w-full h-full max-w-[15rem] max-h-[15rem] lg:max-w-96 lg:max-h-80'
             >
               <h1 className='text-lg font-bold text-stone-900 -mt-3 lg:mt-0 lg:mb-4'>
                 {name}
@@ -161,17 +169,91 @@ export default function Home() {
         </div>
       </section>
       <section className='relative  h-screen'>
-        <Image
-          src='/assets/after1.jpg'
-          alt='hero'
-          layout='fill'
-          objectFit='cover'
-          objectPosition='center'
-          className='absolute z-[-1]'
-        />
+        <div className='flex w-full h-full'>
+          <div className='h-full w-full'>
+            <div className='relative w-full h-1/2'>
+              <Image
+                src='/assets/b4.jpg'
+                alt='hero'
+                layout='fill'
+                objectFit='cover'
+                objectPosition='center'
+                className='absolute z-[-1]'
+              />
+            </div>
+            <div className='relative w-full h-1/2'>
+              <Image
+                src='/assets/after1.jpg'
+                alt='hero'
+                layout='fill'
+                objectFit='cover'
+                objectPosition='center'
+                className='absolute z-[-1]'
+              />
+            </div>
+          </div>
+          <div className='absolute bg-stone-100/90 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-xl p-4 lg:p-10 flex flex-col items-center justify-center gap-4 lg:gap-10'>
+            <h3 className='text-3xl font-bold text-stone-900'>
+              Before and After
+            </h3>
+            <p>
+              Stone Concepts offers a variety of styles, colors and lays to
+              perfect your project!
+            </p>
+            <a href='tel:9136363773'>
+              <Button className='bg-red-500 hover:bg-red-600 hover:shadow-2xl transition-all'>
+                FREE QUOTE
+              </Button>
+            </a>
+          </div>
+          <div className='h-full w-full'>
+            <div className='relative w-full h-1/2'>
+              <Image
+                src='/assets/after1.jpg'
+                alt='hero'
+                layout='fill'
+                objectFit='cover'
+                objectPosition='center'
+                className='absolute z-[-1]'
+              />
+            </div>
+            <div className='relative w-full h-1/2'>
+              <Image
+                src='/assets/after1.jpg'
+                alt='hero'
+                layout='fill'
+                objectFit='cover'
+                objectPosition='center'
+                className='absolute z-[-1]'
+              />
+            </div>
+          </div>
+        </div>
       </section>
-      <section className='relative h-screen'>
+      <section className='relative h-screen backdrop-blur-sm bg-stone-900/30'>
         <p>GALLERY TODO</p>
+        <div className='w-full relative h-[15rem]'>
+          <div
+            className={cn(
+              'absolute top-0 left-0 h-[15rem] w-full transition-all',
+              neverEnding === 0
+                ? 'translate-x-0 duration-0'
+                : '-translate-x-full duration-[10s]'
+            )}
+          >
+            <Image src='/assets/pan.png' alt='hero' layout='fill' />
+          </div>
+          <div
+            className={cn(
+              'absolute top-0 left-0 h-[15rem] w-full transition-all',
+              neverEnding === 0
+                ? 'translate-x-full duration-0'
+                : 'translate-x-0 duration-[10s]'
+            )}
+          >
+            <Image src='/assets/pan.png' alt='hero' layout='fill' />
+          </div>
+        </div>
       </section>
     </div>
   )
