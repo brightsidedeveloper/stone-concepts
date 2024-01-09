@@ -94,8 +94,8 @@ export default function Home() {
           className='absolute z-[-1]'
         />
         <div className='flex flex-col gap-10 p-10 bg-stone-900/40 w-full max-w-4xl items-center justify-center h-fit rounded-lg'>
-          <h1 className='text-6xl font-bold text-white'>
-            Stone Veneer Done Right
+          <h1 className='text-4xl md:text-6xl font-bold text-white text-center'>
+            Stone Veneer
           </h1>
           <p className='text-white text-center'>
             Stone Concepts Offers Incredible Veneer with a variety of Styles,
@@ -117,40 +117,34 @@ export default function Home() {
         </div>
       </section>
       <section className='relative h-screen bg-stone-900/30'>
-        {/* <h2
-          className={cn(
-            'text-4xl p-2 bg-stone-800/40 rounded-xl w-fit mx-auto translate-y-3 font-bold text-center text-white py-10 transition-all duration-700',
-            testies ? 'scale-1 opacity-100' : 'scale-[.7] opacity-0'
-          )}
-        >
-          Testimonials 😊
-        </h2> */}
         <div
           className={cn(
-            'absolute py-32 inset-0 w-full h-full flex flex-wrap items-start justify-center gap-10 transition-all duration-700',
+            'absolute py-4 md:py-32 z-[1] inset-0 w-full h-full flex flex-wrap items-start justify-end md:justify-center gap-8 md:gap-10 transition-all duration-700',
             testies ? 'translate-x-0' : 'translate-x-full'
           )}
         >
           {TESTIES.map(({ name, message }) => (
             <div
               key={name}
-              className='flex p-4 bg-stone-300 rounded-lg shadow-xl flex-col items-center w-full h-full max-w-96 max-h-80'
+              className='flex p-4 bg-stone-300 rounded-lg shadow-xl flex-col items-center w-full h-full max-w-64 max-h-64 md:max-w-96 md:max-h-80'
             >
-              <h1 className='text-xl font-bold text-stone-900 mb-4'>{name}</h1>
-              <p>{message}</p>
+              <h1 className='text-xl font-bold text-stone-900 -mt-3 md:mt-0 md:mb-4'>
+                {name}
+              </h1>
+              <p className='text-sm md:text-base'>{message}</p>
             </div>
           ))}
         </div>
         <div
           className={cn(
-            'absolute inset-0 py-32 w-full h-full flex flex-wrap items-end justify-center gap-10 transition-all duration-700',
+            'absolute inset-0 py-4 md:py-32 w-full h-full flex flex-wrap items-end justify-start md:justify-center gap-8 md:gap-10 transition-all duration-700',
             testies ? 'translate-x-0' : '-translate-x-full'
           )}
         >
           {LAYS.map(({ name, img }) => (
             <div
               key={name}
-              className='flex relative p-4 bg-white rounded-lg shadow-xl flex-col items-center w-full h-full max-w-96 max-h-80'
+              className='flex relative p-4 bg-white rounded-lg shadow-xl flex-col items-center w-full h-full max-w-[12rem] max-h-[11rem] md:max-w-96 md:max-h-80'
             >
               <Image
                 src={img}
