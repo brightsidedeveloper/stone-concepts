@@ -36,6 +36,14 @@ export default function Home() {
     })
   }, [])
 
+  const onFreeQuote = useCallback(() => {
+    if (!scrollRef.current) return console.error('no scroll ref')
+    scrollRef.current.scrollTo({
+      top: document.body.clientHeight * 5 + 100,
+      behavior: 'smooth',
+    })
+  }, [])
+
   const [neverEnding, setNeverEnding] = useState(0)
   useEffect(() => {
     setNeverEnding(1)
@@ -55,9 +63,9 @@ export default function Home() {
       className='overflow-y-auto overflow-x-hidden relative w-screen h-screen'
     >
       <Header hasScrolled={hasScrolled} />
-      <Hero onViewGallery={onViewGallery} />
+      <Hero onViewGallery={onViewGallery} onFreeQuote={onFreeQuote} />
       <Testies testies={testies} />
-      <BeforeAndAfter />
+      <BeforeAndAfter onFreeQuote={onFreeQuote} />
       <Gallery neverEnding={neverEnding} showGallery={showGallery} />
       <ClosingForm />
       <Footer />

@@ -2,7 +2,13 @@ import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import React from 'react'
 
-export default function Hero({ onViewGallery }: { onViewGallery: () => void }) {
+export default function Hero({
+  onViewGallery,
+  onFreeQuote,
+}: {
+  onViewGallery: () => void
+  onFreeQuote: () => void
+}) {
   return (
     <section className={'relative h-screen flex justify-center items-center'}>
       <Image
@@ -30,11 +36,13 @@ export default function Hero({ onViewGallery }: { onViewGallery: () => void }) {
           >
             View Gallery
           </Button>
-          <a href='tel:9136363773'>
-            <Button className='bg-white text-stone-800 hover:bg-gray-200 hover:shadow-2xl transition-all'>
-              FREE QUOTE
-            </Button>
-          </a>
+
+          <Button
+            onClick={onFreeQuote}
+            className='bg-white text-stone-800 hover:bg-gray-200 hover:shadow-2xl transition-all'
+          >
+            FREE QUOTE
+          </Button>
         </div>
       </div>
     </section>

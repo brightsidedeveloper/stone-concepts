@@ -36,7 +36,7 @@ export default function Gallery({
         </div>
         <div
           className={cn(
-            'flex flex-col md:flex-row gap-10 justify-center items-center transition-all duration-500',
+            'flex flex-col mt-20 md:flex-row gap-10 justify-center items-center transition-all duration-500',
             showGallery ? 'scale-1 opacity-1' : 'scale-75 opacity-0'
           )}
         >
@@ -48,7 +48,34 @@ export default function Gallery({
           </div>
         </div>
       </section>
-      <section className='relative h-screen backdrop-blur-sm bg-stone-900/30'></section>
+      <section className='relative h-screen backdrop-blur-sm bg-stone-900/30'>
+        <div
+          className={cn(
+            'flex flex-col mt-20 md:flex-row gap-10 justify-center items-center transition-all duration-500',
+            showGallery ? 'scale-1 opacity-1' : 'scale-75 opacity-0'
+          )}
+        >
+          <div className='relative w-4/5 border-2 border-stone-800 md:w-1/3 aspect-[16/9]'>
+            <Image src='/assets/AFTER.png' alt='hero' layout='fill' />
+          </div>
+          <div className='relative w-4/5 border-2 border-stone-800 md:w-1/3 aspect-[16/9]'>
+            <Image src='/assets/comm.jpg' alt='hero' layout='fill' />
+          </div>
+        </div>
+        <div
+          className={cn(
+            'flex flex-col mt-20 md:flex-row gap-10 justify-center items-center transition-all duration-500',
+            showGallery ? 'scale-1 opacity-1' : 'scale-75 opacity-0'
+          )}
+        >
+          <div className='relative w-4/5 border-2 border-stone-800 md:w-1/3 aspect-[16/9]'>
+            <Image src='/assets/AFTER.png' alt='hero' layout='fill' />
+          </div>
+          <div className='relative w-4/5 border-2 border-stone-800 md:w-1/3 aspect-[16/9]'>
+            <Image src='/assets/comm.jpg' alt='hero' layout='fill' />
+          </div>
+        </div>
+      </section>
     </>
   )
 }

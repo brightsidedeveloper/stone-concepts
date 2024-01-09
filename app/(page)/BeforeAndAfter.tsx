@@ -2,7 +2,11 @@ import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import React from 'react'
 
-export default function BeforeAndAfter() {
+export default function BeforeAndAfter({
+  onFreeQuote,
+}: {
+  onFreeQuote: () => void
+}) {
   return (
     <section className='relative h-screen '>
       <div className='flex w-full h-full'>
@@ -39,11 +43,13 @@ export default function BeforeAndAfter() {
             Stone Concepts offers a variety of styles, colors and lays to
             perfect your project!
           </p>
-          <a href='tel:9136363773'>
-            <Button className='bg-red-500 hover:bg-red-600 hover:shadow-2xl transition-all'>
-              FREE QUOTE
-            </Button>
-          </a>
+
+          <Button
+            onClick={onFreeQuote}
+            className='bg-red-500 hover:bg-red-600 hover:shadow-2xl transition-all'
+          >
+            FREE QUOTE
+          </Button>
         </div>
         <div className='h-full w-full'>
           <div className='relative w-full h-1/2 border-stone-500 border-[3px] border-l-[1.5px] border-b-[1.5px]'>
