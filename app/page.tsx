@@ -74,7 +74,7 @@ export default function Home() {
             hasScrolled ? 'bg-stone-900/30' : 'bg-stone-900'
           )}
         >
-          <div className=' px-20 py-3 flex items-center justify-between w-full max-w-[95rem]'>
+          <div className='px-4 md:px-20 py-3 flex items-center justify-between w-full max-w-[95rem]'>
             <Image src='/assets/LOGO.png' alt='logo' width={150} height={100} />
             <a href='tel:9136363773'>
               <Button className='bg-red-500 hover:bg-red-600 hover:shadow-2xl transition-all'>
@@ -110,9 +110,11 @@ export default function Home() {
             >
               View Gallery
             </Button>
-            <Button className='bg-white text-stone-800 hover:bg-gray-200 hover:shadow-2xl transition-all'>
-              FREE QUOTE
-            </Button>
+            <a href='tel:9136363773'>
+              <Button className='bg-white text-stone-800 hover:bg-gray-200 hover:shadow-2xl transition-all'>
+                FREE QUOTE
+              </Button>
+            </a>
           </div>
         </div>
       </section>
