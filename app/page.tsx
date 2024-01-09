@@ -239,7 +239,7 @@ export default function Home() {
         <div className='w-full relative h-[15rem]'>
           <div
             className={cn(
-              'absolute top-0 left-0 h-[15rem] w-full transition-all ease-linear',
+              'absolute top-0 left-0 h-[15rem] w-[1903px] transition-all ease-linear',
               neverEnding === 0
                 ? 'translate-x-0 duration-0'
                 : '-translate-x-full dur-20'
@@ -249,7 +249,7 @@ export default function Home() {
           </div>
           <div
             className={cn(
-              'absolute top-0 left-0 h-[15rem] w-full transition-all ease-linear',
+              'absolute top-0 left-0 h-[15rem] w-[1903px] transition-all ease-linear',
               neverEnding === 0
                 ? 'translate-x-full duration-0'
                 : 'translate-x-0 dur-20'
