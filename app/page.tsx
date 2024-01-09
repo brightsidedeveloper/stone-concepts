@@ -65,7 +65,7 @@ export default function Home() {
       setNeverEnding(0)
       setTimeout(() => {
         setNeverEnding(1)
-      }, 1)
+      }, 10)
     }, 20_000)
     return () => clearInterval(interval)
   }, [])
