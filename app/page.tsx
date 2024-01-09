@@ -183,7 +183,7 @@ export default function Home() {
       <section className='relative  h-screen '>
         <div className='flex w-full h-full'>
           <div className='h-full w-full'>
-            <div className='relative w-full h-1/2 border-white border-[3px]'>
+            <div className='relative w-full h-1/2 border-stone-500 border-[3px] border-r-[1.5px] border-b-[1.5px]'>
               <Image
                 src='/assets/b4.jpg'
                 alt='hero'
@@ -193,7 +193,7 @@ export default function Home() {
                 className='absolute z-[-1]'
               />
             </div>
-            <div className='relative w-full h-1/2 border-white border-[3px]'>
+            <div className='relative w-full h-1/2 border-stone-500 border-[3px] border-r-[1.5px] border-t-[1.5px]'>
               <Image
                 src='/assets/after1.jpg'
                 alt='hero'
@@ -222,7 +222,7 @@ export default function Home() {
             </a>
           </div>
           <div className='h-full w-full'>
-            <div className='relative w-full h-1/2 border-white border-[3px]'>
+            <div className='relative w-full h-1/2 border-stone-500 border-[3px] border-l-[1.5px] border-b-[1.5px]'>
               <Image
                 src='/assets/after1.jpg'
                 alt='hero'
@@ -232,7 +232,7 @@ export default function Home() {
                 className='absolute z-[-1]'
               />
             </div>
-            <div className='relative w-full h-1/2 border-white border-[3px]'>
+            <div className='relative w-full h-1/2 border-stone-500 border-[3px] border-l-[1.5px] border-t-[1.5px]'>
               <Image
                 src='/assets/after1.jpg'
                 alt='hero'
