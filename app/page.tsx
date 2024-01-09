@@ -175,7 +175,7 @@ export default function Home() {
       <section className='relative  h-screen'>
         <div className='flex w-full h-full'>
           <div className='h-full w-full'>
-            <div className='relative w-full h-1/2'>
+            <div className='relative w-full h-1/2 border-white border-[3px]'>
               <Image
                 src='/assets/b4.jpg'
                 alt='hero'
@@ -185,7 +185,7 @@ export default function Home() {
                 className='absolute z-[-1]'
               />
             </div>
-            <div className='relative w-full h-1/2'>
+            <div className='relative w-full h-1/2 border-white border-[3px]'>
               <Image
                 src='/assets/after1.jpg'
                 alt='hero'
@@ -196,7 +196,10 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className='absolute z-[10] bg-stone-100/90 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-xl p-4 lg:p-10 flex flex-col items-center justify-center gap-4 lg:gap-10'>
+          <div
+            className='absolute z-[10] w-[90%] md:max-w-3xl bg-stone-100/90 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-xl p-4 lg:p-10 flex flex-col items-center justify-center gap-4 
+          lg:gap-10'
+          >
             <h3 className='text-3xl font-bold text-stone-900'>
               Before and After
             </h3>
@@ -211,7 +214,7 @@ export default function Home() {
             </a>
           </div>
           <div className='h-full w-full'>
-            <div className='relative w-full h-1/2'>
+            <div className='relative w-full h-1/2 border-white border-[3px]'>
               <Image
                 src='/assets/after1.jpg'
                 alt='hero'
@@ -221,7 +224,7 @@ export default function Home() {
                 className='absolute z-[-1]'
               />
             </div>
-            <div className='relative w-full h-1/2'>
+            <div className='relative w-full h-1/2 border-white border-[3px]'>
               <Image
                 src='/assets/after1.jpg'
                 alt='hero'
@@ -259,6 +262,44 @@ export default function Home() {
         </div>
       </section>
       {/* //TODO Gallery appears on scroll */}
+      <section
+        className={
+          'h-screen relative bg-stone-800/40 flex justify-center items-center'
+        }
+      >
+        <Image
+          src='/assets/SC.png'
+          alt='hero'
+          layout='fill'
+          objectFit='cover'
+          objectPosition='center'
+          className='absolute z-[-1]'
+        />
+        <div className='flex flex-col gap-10 p-10 bg-stone-900/40 w-full max-w-4xl items-center justify-center h-fit rounded-lg'>
+          <h1 className='text-4xl lg:text-6xl font-bold text-white text-center'>
+            Stone Veneer
+          </h1>
+          <p className='text-white text-center'>
+            Stone Concepts Offers Incredible Veneer with a variety of Styles,
+            Colors and Lays to Perfect your Project! We are a family owned and
+            operated business with over 40 years of experience in the stone
+            veneer industry.
+          </p>
+          <div className='flex gap-10 items-center justify-center'>
+            <Button
+              onClick={onViewGallery}
+              className='bg-red-500 hover:bg-red-600 hover:shadow-2xl transition-all'
+            >
+              View Gallery
+            </Button>
+            <a href='tel:9136363773'>
+              <Button className='bg-white text-stone-800 hover:bg-gray-200 hover:shadow-2xl transition-all'>
+                FREE QUOTE
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
