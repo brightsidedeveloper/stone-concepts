@@ -75,3 +75,8 @@
     background-repeat: repeat;
   }
 }
+
+.dur-10 {
+  transition-duration: 10s;
+  animation-duration: 10s;
+}

@@ -238,7 +238,7 @@ export default function Home() {
               'absolute top-0 left-0 h-[15rem] w-full transition-all',
               neverEnding === 0
                 ? 'translate-x-0 duration-0'
-                : '-translate-x-full duration-[10s]'
+                : '-translate-x-full dur-10'
             )}
           >
             <Image src='/assets/pan.png' alt='hero' layout='fill' />
@@ -248,7 +248,7 @@ export default function Home() {
               'absolute top-0 left-0 h-[15rem] w-full transition-all',
               neverEnding === 0
                 ? 'translate-x-full duration-0'
-                : 'translate-x-0 duration-[10s]'
+                : 'translate-x-0 dur-10'
             )}
           >
             <Image src='/assets/pan.png' alt='hero' layout='fill' />
