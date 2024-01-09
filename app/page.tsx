@@ -196,7 +196,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className='absolute bg-stone-100/90 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-xl p-4 lg:p-10 flex flex-col items-center justify-center gap-4 lg:gap-10'>
+          <div className='absolute z-[10] bg-stone-100/90 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-xl p-4 lg:p-10 flex flex-col items-center justify-center gap-4 lg:gap-10'>
             <h3 className='text-3xl font-bold text-stone-900'>
               Before and After
             </h3>
@@ -235,7 +235,6 @@ export default function Home() {
         </div>
       </section>
       <section className='relative h-screen backdrop-blur-sm bg-stone-900/30'>
-        <p>GALLERY TODO</p>
         <div className='w-full relative h-[15rem]'>
           <div
             className={cn(
@@ -259,6 +258,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* //TODO Gallery appears on scroll */}
     </div>
   )
 }
