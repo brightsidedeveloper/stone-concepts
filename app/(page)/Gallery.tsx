@@ -49,14 +49,14 @@ export default function Gallery({
         </div>
       </section>
       <section className='relative h-screen backdrop-blur-sm bg-stone-900/30'>
-        <video
+        {/* <video
           className='mx-auto w-[300px] aspect-[9/16] border-2 border-stone-800'
           muted
           autoPlay
           playsInline
           loop
           src='/assets/Reel1Final.mp4'
-        />
+        /> */}
       </section>
     </>
   )
