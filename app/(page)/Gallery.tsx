@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import React from 'react'
@@ -5,9 +6,11 @@ import React from 'react'
 export default function Gallery({
   neverEnding,
   showGallery,
+  onFreeQuote,
 }: {
   neverEnding: number
   showGallery: boolean
+  onFreeQuote: () => void
 }) {
   return (
     <>
@@ -36,16 +39,17 @@ export default function Gallery({
         </div>
         <div
           className={cn(
-            'flex flex-col mt-20 md:flex-row gap-10 justify-center items-center transition-all duration-500',
+            'flex flex-col mt-2 md:flex-row gap-4 md:gap-10 justify-center items-center transition-all duration-1000',
             showGallery ? 'scale-1 opacity-1' : 'scale-75 opacity-0'
           )}
         >
-          <div className='relative w-4/5 border-2 border-stone-800 md:w-1/3 aspect-[16/9]'>
+          <div className='relative w-full border-2 border-stone-800 md:w-1/3 aspect-[16/9]'>
             <Image src='/assets/AFTER.png' alt='hero' layout='fill' />
           </div>
-          <div className='relative w-4/5 border-2 border-stone-800 md:w-1/3 aspect-[16/9]'>
+          <div className='relative w-full border-2 border-stone-800 md:w-1/3 aspect-[16/9]'>
             <Image src='/assets/comm.jpg' alt='hero' layout='fill' />
           </div>
+          <Button onClick={onFreeQuote}>Learn More</Button>
         </div>
       </section>
       <section className='relative h-screen backdrop-blur-sm bg-stone-900/30'>
@@ -57,6 +61,22 @@ export default function Gallery({
           loop
           src='/assets/Reel1Final.mp4'
         /> */}
+        <div
+          className={cn(
+            'flex flex-col mt-2 md:flex-row gap-4 md:gap-10 justify-center items-center transition-all duration-500',
+            showGallery ? 'scale-1 opacity-1' : 'scale-75 opacity-0'
+          )}
+        >
+          <div className='relative w-full border-2 border-stone-800 md:w-1/3 aspect-[16/9]'>
+            <Image src='/assets/AFTER.png' alt='hero' layout='fill' />
+          </div>
+          <div className='relative w-full border-2 border-stone-800 md:w-1/3 aspect-[16/9]'>
+            <Image src='/assets/comm.jpg' alt='hero' layout='fill' />
+          </div>
+          <div className='relative w-full border-2 border-stone-800 md:w-1/3 aspect-[16/9]'>
+            <Image src='/assets/comm.jpg' alt='hero' layout='fill' />
+          </div>
+        </div>
       </section>
     </>
   )

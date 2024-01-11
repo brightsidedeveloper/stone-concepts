@@ -66,7 +66,11 @@ export default function Home() {
       <Hero onViewGallery={onViewGallery} onFreeQuote={onFreeQuote} />
       <Testies testies={testies} />
       <BeforeAndAfter onFreeQuote={onFreeQuote} />
-      <Gallery neverEnding={neverEnding} showGallery={showGallery} />
+      <Gallery
+        neverEnding={neverEnding}
+        showGallery={showGallery}
+        onFreeQuote={onFreeQuote}
+      />
       <ClosingForm />
       <Footer />
     </div>

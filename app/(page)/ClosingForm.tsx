@@ -23,6 +23,7 @@ export default function ClosingForm() {
         <h1 className='text-2xl lg:text-4xl font-bold text-white text-center'>
           GET STARTED TODAY
         </h1>
+        {/* //TODO Show hours and number when closed */}
         <a href='tel:9136363773'>
           <Button className='bg-red-500 hover:bg-red-600 hover:shadow-2xl transition-all'>
             Call NOW
