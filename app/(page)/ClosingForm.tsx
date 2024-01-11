@@ -1,10 +1,32 @@
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
+
+import { sendMessage } from '@/lib/actions/form.action'
+import { Check } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
+import toast from 'react-hot-toast'
 
 export default function ClosingForm() {
+  const [submitted, setSubmitted] = React.useState(false)
+
+  const [name, setName] = React.useState('')
+  const [phone, setPhone] = React.useState('')
+  const [message, setMessage] = React.useState('')
+
+  const onSubmit = React.useCallback(() => {
+    if (!name) toast.error('Please enter your name')
+    else if (!phone) toast.error('Please enter your phone number')
+    sendMessage(name, phone, message)
+    setSubmitted(true)
+    setName('')
+    setPhone('')
+    setMessage('')
+    toast.success('Message sent!')
+    setTimeout(() => setSubmitted(false), 3_000)
+  }, [message, name, phone])
+
   return (
     <section
       className={
@@ -23,7 +45,7 @@ export default function ClosingForm() {
         <h1 className='text-2xl lg:text-4xl font-bold text-white text-center'>
           GET STARTED TODAY
         </h1>
-        {/* //TODO Show hours and number when closed */}
+        {/* //TODO Show hours and number when closed & Desktop pop down */}
         <a href='tel:9136363773'>
           <Button className='bg-red-500 hover:bg-red-600 hover:shadow-2xl transition-all'>
             Call NOW
@@ -38,11 +60,31 @@ export default function ClosingForm() {
           we’ll get in touch.
         </p>
         <div className='flex flex-col w-full gap-5 items-center justify-center'>
-          <Input placeholder='Name' className='bg-stone-300' />
-          <Input placeholder='Phone' className='bg-stone-300' />
-          <Textarea placeholder='Message' className='bg-stone-300' />
-          <Button className='ml-auto bg-stone-300 text-stone-800'>
-            Submit
+          <Input
+            placeholder='Name'
+            value={name}
+            onChange={e => setName(e.target.value)}
+            className='bg-stone-300'
+          />
+          <Input
+            placeholder='Phone'
+            type='tel'
+            value={phone}
+            onChange={e => setPhone(e.target.value)}
+            className='bg-stone-300'
+          />
+          <Textarea
+            placeholder='Message'
+            value={message}
+            onChange={e => setMessage(e.target.value)}
+            className='bg-stone-300'
+          />
+          <Button
+            disabled={submitted}
+            onClick={onSubmit}
+            className='ml-auto bg-stone-300 text-stone-800 hover:bg-stone-400 hover:text-stone-900 transition-all'
+          >
+            {submitted ? <Check className='w-5 h-5' /> : 'Submit'}
           </Button>
         </div>
       </div>

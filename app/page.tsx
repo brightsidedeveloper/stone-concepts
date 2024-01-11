@@ -1,8 +1,6 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
-import Image from 'next/image'
+import { Toaster } from 'react-hot-toast'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import Header from './(page)/Header'
 import Hero from './(page)/Hero'
@@ -81,6 +79,7 @@ export default function Home() {
       />
       <ClosingForm />
       <Footer />
+      <Toaster />
     </div>
   )
 }
