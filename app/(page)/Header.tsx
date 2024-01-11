@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function Header({ hasScrolled }: { hasScrolled: boolean }) {
   return (
-    <div className='sticky top-[-44px] w-full z-10'>
+    <div className='sticky top-[-44px] w-full z-20'>
       <div className='bg-stone-950 flex items-center justify-center text-center py-3'>
         <p className='text-white text-sm'>Stone Veneer Done Right</p>
       </div>
