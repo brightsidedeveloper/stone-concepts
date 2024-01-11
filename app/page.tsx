@@ -43,8 +43,9 @@ export default function Home() {
     const heights = [g1Ref.current?.clientHeight, g2Ref.current?.clientHeight]
     const galleryHeight =
       heights?.reduce((acc: number, h) => (h ? acc + h : acc), 0) ?? 0
+    const magicNumber = 50
     scrollRef.current.scrollTo({
-      top: document.body.clientHeight * 3 + galleryHeight,
+      top: document.body.clientHeight * 3 + galleryHeight + magicNumber,
       behavior: 'smooth',
     })
   }, [])
