@@ -7,14 +7,21 @@ export default function Gallery({
   neverEnding,
   showGallery,
   onFreeQuote,
+  g1Ref,
+  g2Ref,
 }: {
   neverEnding: number
   showGallery: boolean
   onFreeQuote: () => void
+  g1Ref: React.RefObject<HTMLDivElement>
+  g2Ref: React.RefObject<HTMLDivElement>
 }) {
   return (
     <>
-      <section className='relative h-screen backdrop-blur-sm bg-stone-900/30 border-b-2 border-stone-500'>
+      <section
+        ref={g1Ref}
+        className='relative h-fit pb-2 backdrop-blur-sm bg-stone-900/30 border-b-2 border-stone-500'
+      >
         <div className='w-full relative h-[15rem]'>
           <div
             className={cn(
@@ -52,7 +59,10 @@ export default function Gallery({
           <Button onClick={onFreeQuote}>Learn More</Button>
         </div>
       </section>
-      <section className='relative h-screen overflow-visible backdrop-blur-sm bg-stone-900/30'>
+      <section
+        ref={g2Ref}
+        className='relative h-fit pb-2 backdrop-blur-sm bg-stone-900/30'
+      >
         {/* <video
           className='mx-auto w-[300px] aspect-[9/16] border-2 border-stone-800'
           muted

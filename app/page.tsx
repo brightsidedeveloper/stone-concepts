@@ -36,10 +36,16 @@ export default function Home() {
     })
   }, [])
 
+  const g1Ref = useRef<HTMLDivElement>(null)
+  const g2Ref = useRef<HTMLDivElement>(null)
   const onFreeQuote = useCallback(() => {
     if (!scrollRef.current) return console.error('no scroll ref')
+    const heights = [g1Ref.current?.clientHeight, g2Ref.current?.clientHeight]
+    const galleryHeight =
+      heights?.reduce((acc: number, h) => (h ? acc + h : acc), 0) ?? 0
+    console.log('````', galleryHeight)
     scrollRef.current.scrollTo({
-      top: document.body.clientHeight * 5 + 100,
+      top: document.body.clientHeight * 3 + galleryHeight,
       behavior: 'smooth',
     })
   }, [])
@@ -70,6 +76,8 @@ export default function Home() {
         neverEnding={neverEnding}
         showGallery={showGallery}
         onFreeQuote={onFreeQuote}
+        g1Ref={g1Ref}
+        g2Ref={g2Ref}
       />
       <ClosingForm />
       <Footer />
