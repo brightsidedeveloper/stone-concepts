@@ -52,7 +52,7 @@ export default function Gallery({
           <Button onClick={onFreeQuote}>Learn More</Button>
         </div>
       </section>
-      <section className='relative h-screen backdrop-blur-sm bg-stone-900/30'>
+      <section className='relative h-screen overflow-visible backdrop-blur-sm bg-stone-900/30'>
         {/* <video
           className='mx-auto w-[300px] aspect-[9/16] border-2 border-stone-800'
           muted
