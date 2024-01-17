@@ -24,10 +24,10 @@ export default function Hero({
           Stone Veneer
         </h1>
         <p className='text-white text-center'>
-          Stone Concepts Offers Incredible Veneer with a variety of Styles,
-          Colors and Lays to Perfect your Project! We are a family owned and
-          operated business with over 40 years of experience in the stone veneer
-          industry.
+          We are a family owned and operated business with over 40 years of
+          experience in the stone veneer industry. Stone Concepts manufactures
+          high quality stone veneer, used to upgrade home fronts, fireplaces,
+          indoor/outdoor living areas and commercial buildings.
         </p>
         <div className='flex gap-10 items-center justify-center'>
           <Button

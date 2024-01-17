@@ -1,3 +1,4 @@
+import CallNow from '@/components/CallNow'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -45,12 +46,7 @@ export default function ClosingForm() {
         <h1 className='text-2xl lg:text-4xl font-bold text-white text-center'>
           GET STARTED TODAY
         </h1>
-        {/* //TODO Show hours and number when closed & Desktop pop down */}
-        <a href='tel:9136363773'>
-          <Button className='bg-red-500 hover:bg-red-600 hover:shadow-2xl transition-all'>
-            Call NOW
-          </Button>
-        </a>
+        <CallNow />
         <div className='flex w-full text-stone-300 items-center gap-4'>
           <div className='h-0.5 w-full bg-stone-300 rounded-full' /> or{' '}
           <div className='h-0.5 w-full bg-stone-300 rounded-full' />

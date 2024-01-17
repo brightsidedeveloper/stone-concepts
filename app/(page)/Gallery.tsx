@@ -56,7 +56,9 @@ export default function Gallery({
           <div className='relative w-full border-2 border-stone-800 md:w-1/3 aspect-[16/10]'>
             <Image src='/assets/pool.jpg' alt='hero' layout='fill' />
           </div>
-          <Button onClick={onFreeQuote}>Learn More</Button>
+          <Button className='lg:hidden' onClick={onFreeQuote}>
+            Learn More
+          </Button>
         </div>
       </section>
       <section
