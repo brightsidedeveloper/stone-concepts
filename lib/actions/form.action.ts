@@ -1,6 +1,7 @@
 'use server'
+import { Resend } from 'resend'
 
-import twilioClient from '../twilioClient'
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function sendMessage(
   name: string,
@@ -8,10 +9,14 @@ export async function sendMessage(
   message: string
 ) {
   try {
-    await twilioClient.messages.create({
-      body: `New Client: ${name}\n\n\nPhone Number: ${number}\n\n\nMessage: ${message}`,
-      to: '+19136363773',
-      from: process.env.TWILIO_PHONE_NUMBER,
+    await resend.emails.send({
+      from: 'Stone Concepts <tim@brightsidedeveloper.com>',
+      to: 'tim.stoneconcepts@gmail.com',
+      subject: 'New Customer Inquiry!',
+      html: `<p><strong>Name: </strong>${name}</p>
+      <p><strong>Number: </strong>${number}</p>
+      <p><strong>Message: </strong>${message}</p>
+      `,
     })
   } catch (error) {
     console.log(error)

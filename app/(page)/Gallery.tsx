@@ -20,7 +20,7 @@ export default function Gallery({
     <>
       <section
         ref={g1Ref}
-        className='relative h-fit pb-2 backdrop-blur-sm bg-stone-900/30 border-b-2 border-stone-500'
+        className='relative h-fit pb-2 backdrop-blur-sm bg-stone-900/30'
       >
         <div className='w-full relative h-[15rem]'>
           <div
@@ -31,7 +31,7 @@ export default function Gallery({
                 : '-translate-x-full dur-20'
             )}
           >
-            <Image priority src='/assets/pan.png' alt='hero' layout='fill' />
+            <Image priority src='/assets/pan.png' alt='hero' fill />
           </div>
           <div
             className={cn(
@@ -41,7 +41,7 @@ export default function Gallery({
                 : 'translate-x-0 dur-20'
             )}
           >
-            <Image priority src='/assets/pan.png' alt='hero' layout='fill' />
+            <Image priority src='/assets/pan.png' alt='hero' fill />
           </div>
         </div>
         <div
@@ -51,10 +51,10 @@ export default function Gallery({
           )}
         >
           <div className='relative w-full border-2 border-stone-800 md:w-1/3 aspect-[16/11]'>
-            <Image priority src='/assets/duel.png' alt='hero' layout='fill' />
+            <Image priority src='/assets/duel.png' alt='hero' fill />
           </div>
           <div className='relative w-full border-2 border-stone-800 md:w-1/3 aspect-[16/10]'>
-            <Image priority src='/assets/pool.jpg' alt='hero' layout='fill' />
+            <Image priority src='/assets/pool.jpg' alt='hero' fill />
           </div>
           <Button className='lg:hidden' onClick={onFreeQuote}>
             Learn More
@@ -80,18 +80,13 @@ export default function Gallery({
           )}
         >
           <div className='relative w-full border-2 border-stone-800 md:w-1/3 aspect-[16/11]'>
-            <Image priority src='/assets/back.jpeg' alt='hero' layout='fill' />
+            <Image priority src='/assets/back.jpeg' alt='hero' fill />
           </div>
           <div className='relative w-full border-2 border-stone-800 md:w-1/3 aspect-[16/11]'>
-            <Image
-              priority
-              src='/assets/dentist.jpg'
-              alt='hero'
-              layout='fill'
-            />
+            <Image priority src='/assets/dentist.jpg' alt='hero' fill />
           </div>
           <div className='relative w-full border-2 border-stone-800 md:w-1/3 aspect-[16/11]'>
-            <Image priority src='/assets/out.png' alt='hero' layout='fill' />
+            <Image priority src='/assets/out.png' alt='hero' fill />
           </div>
         </div>
       </section>

@@ -16,7 +16,7 @@ export default function BeforeAndAfter({
               priority
               src='/assets/b4.jpg'
               alt='hero'
-              layout='fill'
+              fill
               objectFit='cover'
               objectPosition='center'
               className='absolute z-[-1]'
@@ -27,7 +27,7 @@ export default function BeforeAndAfter({
               priority
               src='/assets/b4A.png'
               alt='hero'
-              layout='fill'
+              fill
               objectFit='cover'
               objectPosition='center'
               className='absolute z-[-1]'
@@ -59,7 +59,7 @@ export default function BeforeAndAfter({
               priority
               src='/assets/after1.jpg'
               alt='hero'
-              layout='fill'
+              fill
               objectFit='cover'
               objectPosition='center'
               className='absolute z-[-1]'
@@ -70,7 +70,7 @@ export default function BeforeAndAfter({
               priority
               src='/assets/b4B.png'
               alt='hero'
-              layout='fill'
+              fill
               objectFit='cover'
               objectPosition='center'
               className='absolute z-[-1]'

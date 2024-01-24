@@ -49,7 +49,7 @@ export default function Testies({ testies }: { testies: boolean }) {
           <div
             key={name}
             className={cn(
-              'flex border-stone-500 border-2 relative bg-[length:800px_800px] bg-center bg-stone-300 rounded-xl shadow-xl flex-col items-center w-full h-full max-w-[15rem] max-h-[15rem] lg:max-w-96 lg:max-h-80',
+              'flex border-stone-500 border-2 relative bg-[length:800px_800px] bg-center bg-stone-300 rounded-xl shadow-xl flex-col items-center w-full h-full max-w-[11rem] max-h-[11rem] sm:max-w-[15rem] sm:max-h-[15rem] lg:max-w-96 lg:max-h-80',
               className
             )}
           >
@@ -57,7 +57,9 @@ export default function Testies({ testies }: { testies: boolean }) {
               <h1 className='text-lg font-bold text-stone-50 -mt-3 lg:mt-0 lg:mb-4'>
                 {name}
               </h1>
-              <p className='text-stone-50 text-xs lg:text-base'>{message}</p>
+              <p className='text-stone-50 text-[0.53rem] sm:text-xs lg:text-base'>
+                {message}
+              </p>
             </div>
           </div>
         ))}
@@ -71,7 +73,7 @@ export default function Testies({ testies }: { testies: boolean }) {
         {LAYS.map(({ name, img }) => (
           <div
             key={name}
-            className='flex relative p-4 bg-white rounded-lg shadow-xl flex-col items-center w-full h-full max-w-[12rem] max-h-[12rem] lg:max-w-96 lg:max-h-80'
+            className='flex relative p-4 bg-white rounded-lg shadow-xl flex-col items-center w-full h-full max-w-[10rem] max-h-[10rem] sm:max-w-[12rem] sm:max-h-[12rem] lg:max-w-96 lg:max-h-80'
           >
             <Image
               priority

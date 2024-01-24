@@ -15,7 +15,7 @@ export default function Hero({
         priority
         src='/assets/hero.webp'
         alt='hero'
-        layout='fill'
+        fill
         objectFit='cover'
         objectPosition='center'
         className='absolute z-[-1]'

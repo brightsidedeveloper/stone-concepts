@@ -17,8 +17,8 @@ export default function ClosingForm() {
   const [message, setMessage] = React.useState('')
 
   const onSubmit = React.useCallback(() => {
-    if (!name) toast.error('Please enter your name')
-    else if (!phone) toast.error('Please enter your phone number')
+    if (!name) return toast.error('Please enter your name')
+    else if (!phone) return toast.error('Please enter your phone number')
     sendMessage(name, phone, message)
     setSubmitted(true)
     setName('')
@@ -38,7 +38,7 @@ export default function ClosingForm() {
         priority
         src='/assets/SC.png'
         alt='hero'
-        layout='fill'
+        fill
         objectFit='cover'
         objectPosition='center'
         className='absolute z-[-1]'
@@ -48,6 +48,10 @@ export default function ClosingForm() {
           GET STARTED TODAY
         </h1>
         <CallNow />
+        <div className='text-stone-300 -mt-5 -mb-5'>
+          <p>- Mon-Sat: 8AM-5PM</p>
+          <p>- Sun: Closed</p>
+        </div>
         <div className='flex w-full text-stone-300 items-center gap-4'>
           <div className='h-0.5 w-full bg-stone-300 rounded-full' /> or{' '}
           <div className='h-0.5 w-full bg-stone-300 rounded-full' />
