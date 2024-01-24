@@ -12,6 +12,7 @@ export default function Hero({
   return (
     <section className={'relative h-screen flex justify-center items-center'}>
       <Image
+        priority
         src='/assets/hero.webp'
         alt='hero'
         layout='fill'

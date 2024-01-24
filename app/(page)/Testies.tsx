@@ -74,6 +74,7 @@ export default function Testies({ testies }: { testies: boolean }) {
             className='flex relative p-4 bg-white rounded-lg shadow-xl flex-col items-center w-full h-full max-w-[12rem] max-h-[12rem] lg:max-w-96 lg:max-h-80'
           >
             <Image
+              priority
               src={img}
               alt='hero'
               fill

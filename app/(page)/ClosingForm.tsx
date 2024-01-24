@@ -35,6 +35,7 @@ export default function ClosingForm() {
       }
     >
       <Image
+        priority
         src='/assets/SC.png'
         alt='hero'
         layout='fill'

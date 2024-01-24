@@ -13,6 +13,7 @@ export default function BeforeAndAfter({
         <div className='h-full w-full'>
           <div className='relative w-full h-1/2 border-stone-500 border-[3px] border-r-[1.5px] border-b-[1.5px]'>
             <Image
+              priority
               src='/assets/b4.jpg'
               alt='hero'
               layout='fill'
@@ -23,6 +24,7 @@ export default function BeforeAndAfter({
           </div>
           <div className='relative w-full h-1/2 border-stone-500 border-[3px] border-r-[1.5px] border-t-[1.5px]'>
             <Image
+              priority
               src='/assets/b4A.png'
               alt='hero'
               layout='fill'
@@ -54,6 +56,7 @@ export default function BeforeAndAfter({
         <div className='h-full w-full'>
           <div className='relative w-full h-1/2 border-stone-500 border-[3px] border-l-[1.5px] border-b-[1.5px]'>
             <Image
+              priority
               src='/assets/after1.jpg'
               alt='hero'
               layout='fill'
@@ -64,6 +67,7 @@ export default function BeforeAndAfter({
           </div>
           <div className='relative w-full h-1/2 border-stone-500 border-[3px] border-l-[1.5px] border-t-[1.5px]'>
             <Image
+              priority
               src='/assets/b4B.png'
               alt='hero'
               layout='fill'

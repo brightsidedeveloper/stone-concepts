@@ -17,7 +17,13 @@ export default function Header({ hasScrolled }: { hasScrolled: boolean }) {
         )}
       >
         <div className='px-4 lg:px-20 py-3 flex items-center overflow-visible justify-between w-full max-w-[95rem]'>
-          <Image src='/assets/LOGO.png' alt='logo' width={150} height={100} />
+          <Image
+            priority
+            src='/assets/LOGO.png'
+            alt='logo'
+            width={150}
+            height={100}
+          />
           <CallNow />
         </div>
       </header>
