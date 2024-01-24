@@ -46,7 +46,7 @@ export default function Testies({
   return (
     <section
       ref={testiesRef}
-      className='relative min-h-[850px] h-screen bg-stone-900/30'
+      className='relative min-h-[850px] max-h-[945px] h-screen bg-stone-900/30'
     >
       <div
         className={cn(
