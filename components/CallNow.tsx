@@ -37,7 +37,7 @@ export default function CallNow() {
           <p
             className={`w-[10rem] text-center text-rose-500 text-lg font-bold  `}
           >
-            (913) 636-3773
+            (913) 206-5030
           </p>
         </div>
       </div>

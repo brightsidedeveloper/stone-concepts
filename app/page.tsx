@@ -26,10 +26,14 @@ export default function Home() {
   }, [])
 
   const scrollRef = useRef<HTMLDivElement>(null)
+  const testiesRef = useRef<HTMLDivElement>(null)
   const onViewGallery = useCallback(() => {
     if (!scrollRef.current) return console.error('no scroll ref')
     scrollRef.current.scrollTo({
-      top: document.body.clientHeight * 3 + 50,
+      top:
+        document.body.clientHeight * 2 +
+        (testiesRef.current?.clientHeight || 0) +
+        50,
       behavior: 'smooth',
     })
   }, [])
@@ -38,12 +42,16 @@ export default function Home() {
   const g2Ref = useRef<HTMLDivElement>(null)
   const onFreeQuote = useCallback(() => {
     if (!scrollRef.current) return console.error('no scroll ref')
-    const heights = [g1Ref.current?.clientHeight, g2Ref.current?.clientHeight]
+    const heights = [
+      g1Ref.current?.clientHeight,
+      g2Ref.current?.clientHeight,
+      testiesRef.current?.clientHeight,
+    ]
     const galleryHeight =
       heights?.reduce((acc: number, h) => (h ? acc + h : acc), 0) ?? 0
     const magicNumber = 50
     scrollRef.current.scrollTo({
-      top: document.body.clientHeight * 3 + galleryHeight + magicNumber,
+      top: document.body.clientHeight * 2 + galleryHeight + magicNumber,
       behavior: 'smooth',
     })
   }, [])
@@ -68,7 +76,7 @@ export default function Home() {
     >
       <Header hasScrolled={hasScrolled} />
       <Hero onViewGallery={onViewGallery} onFreeQuote={onFreeQuote} />
-      <Testies testies={testies} />
+      <Testies testiesRef={testiesRef} testies={testies} />
       <BeforeAndAfter onFreeQuote={onFreeQuote} />
       <Gallery
         neverEnding={neverEnding}
