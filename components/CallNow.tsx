@@ -17,7 +17,7 @@ export default function CallNow() {
 
   return (
     <>
-      <a className='md:hidden' href='tel:9132065030'>
+      <a className='md:hidden' href='tel:9134410200'>
         <Button className='bg-red-500 hover:bg-red-600 hover:shadow-2xl transition-all'>
           Call NOW
         </Button>
@@ -37,7 +37,7 @@ export default function CallNow() {
           <p
             className={`w-[10rem] text-center text-rose-500 text-lg font-bold  `}
           >
-            (913) 206-5030
+            (913) 441-0200
           </p>
         </div>
       </div>
