@@ -17,7 +17,7 @@ export default function CallNow() {
 
   return (
     <>
-      <a className='md:hidden' href='tel:9136363773'>
+      <a className='md:hidden' href='tel:9132065030'>
         <Button className='bg-red-500 hover:bg-red-600 hover:shadow-2xl transition-all'>
           Call NOW
         </Button>
