@@ -1,7 +1,7 @@
 import React from "react"
 import RedirectClient from "./RedirectClient"
 
-const articles = [
+export const articles = [
   {
     title: "The Ultimate Guide to Stone Veneer Installation",
     body: "Whether you're considering stone veneer for your home's exterior or interior, this comprehensive guide covers everything you need to know about the installation process. From preparation and substrate requirements to mortar selection and finishing techniques, learn how to achieve professional results with stone veneer.",
