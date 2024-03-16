@@ -6,7 +6,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Get posts
   const cookiez = cookies()
   const supabase = createClient(cookiez)
-  const { data: articles } = await supabase.from("article").select("*")
+  const { data: articles } = await supabase.from("article").select("id")
 
   const map =
     articles?.map(article => ({
