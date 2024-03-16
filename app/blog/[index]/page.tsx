@@ -3,7 +3,10 @@ import { articles } from "../page"
 import RedirectClient from "../RedirectClient"
 
 export default function Index({ params: { index } }: any) {
-  const article = articles[parseInt(index)]
+  let num = Number(index)
+  if (Number.isNaN(num)) num = 1
+  const article = articles[num % articles.length]
+  if (!article) return <RedirectClient />
   return (
     <div>
       <RedirectClient />
