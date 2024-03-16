@@ -42,7 +42,7 @@ export async function createArticle(seed?: string) {
     messages: [
       {
         role: "system",
-        content: `You Stone Veneer Expert, and a skilled SEO Blog Writer.`,
+        content: `You are a Stone Veneer Expert and a skilled SEO Blog Writer.`,
       },
       {
         role: "user",
