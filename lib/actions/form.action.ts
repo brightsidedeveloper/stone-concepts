@@ -64,7 +64,7 @@ export async function createArticle(seed?: string) {
   try {
     const parsed = JSON.parse(article)
     addArticles([parsed])
-  } catch (error) {
-    console.log(error)
+  } catch (err) {
+    console.log(err)
   }
 }
