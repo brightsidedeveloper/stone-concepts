@@ -1,0 +1,8 @@
+{
+    "crons": [
+      {
+        "path": "/api/post-article",
+        "schedule": "16 16 * * * *"
+      }
+    ]
+  }
