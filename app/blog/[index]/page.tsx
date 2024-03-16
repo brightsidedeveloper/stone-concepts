@@ -1,6 +1,6 @@
 import React from "react"
-import { articles } from "../page"
 import RedirectClient from "../RedirectClient"
+import { articles } from "@/lib/constants/articles"
 
 export default function Index({ params: { index } }: any) {
   let num = Number(index)
